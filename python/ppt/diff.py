@@ -51,6 +51,7 @@ class POSIXDiffer(Differ):
         second = self._dump('>', b, blo, bhi)
 
         for g in first, '---\n', second:
+        for g in first, ['---\n'], second:
             for line in g:
                 yield line
 
